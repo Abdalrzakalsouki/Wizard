@@ -1,38 +1,119 @@
-.App {
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 12px;
+  font-size: 100%;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  height: 100%;
+  background: linear-gradient(to bottom, rgb(21, 156, 193) 0%, rgb(161, 35, 157) 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.App  {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (min-width: 700px) {
+  body {
+    margin: 10px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo {
+
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 920px) {
+  .App {
+    max-width: 880px;
+    margin:  auto;
+    font-size: 1.1em;
+  }
+}
+.logo{
+  position: relative;
+  top: 5px;
+  left: -230px;
+  max-width: 90px;
+  border-radius:  0.5cm;
+  animation-name: logo;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+}
+@keyframes logo {
+  0%   {left:0px; top:0px;}
+  25%  { left:1240px; top:0px;}
+}
+.Search{
+text-align: center;
+margin: auto;
+width: 60%;
+padding: 20px;
+font-family: "Times NewRcoman";
+font-weight: bold;
+color: rgb(12, 12, 91);
+}
+.SearchBox{
+  height: 100%;
+  width: 100%;
+  padding: 0px 10px;
+  border-radius: 20px;
+  font-size: 30px;
+  font-family: "Nunito";
+  color: blue;
+  font-weight: bold;
+}
+.Button{
+  color: rgb(12, 12, 91) !important;
+  font-weight: bold !important;
+}
+
+.row {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 10px 0;
+  border-radius: 1cm;
 }
+.Cards
+{
+  background: linear-gradient(to bottom, rgb(21, 156, 193) 0%, rgb(34, 183, 173) 100%) !important;
+  border-width: thick !important;
+  border-style: solid !important;
+  width: 18em;
+  margin-top: 1em;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
 
-.App-link {
-  color: #61dafb;
+
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.image
+{
+  border-width: thick;
+  border-style: solid;
+  border-color: rgb(41, 193, 195);
+  border-radius: 1cm;
+  width: 100%;
+  background: rgb(68, 229, 229);
+  
+}
+.cardtitle
+{
+  
+  color: black;
+  font-weight: bolder !important;
+  margin-top: 0,5em;
+  
+}
+.cardbody{
+  border-color: rgb(41, 193, 195);
+  border-width: thick;
+  border-style: solid;
+  border-radius: 1cm;
+  background: rgb(68, 229, 229);
+  font-weight: bold;
 }
